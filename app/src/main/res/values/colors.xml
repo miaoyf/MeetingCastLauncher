@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#0B1220</color>
+    <color name="ink">#F5F7FA</color>
+    <color name="muted">#94A3B8</color>
+    <color name="blue">#1769E0</color>
+    <color name="blue_focused">#1769E0</color>
+    <color name="brand">#67A9FF</color>
+</resources>

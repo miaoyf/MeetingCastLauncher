@@ -1,0 +1,9 @@
+.gradle/
+.android-build/
+build/
+app/build/
+airplay-analysis/
+local.properties
+*.iml
+.idea/
+.DS_Store

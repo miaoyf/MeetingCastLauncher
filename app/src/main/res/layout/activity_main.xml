@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingLeft="48dp"
+    android:paddingTop="24dp"
+    android:paddingRight="48dp"
+    android:paddingBottom="22dp">
+
+    <TextView
+        android:id="@+id/deviceNameHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:nextFocusDown="@id/hdmiCard"
+        android:padding="8dp"
+        android:textColor="@color/ink"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:format12Hour="HH:mm"
+        android:format24Hour="HH:mm"
+        android:textColor="@color/ink"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/hdmiCard"
+        android:layout_width="match_parent"
+        android:layout_height="285dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/hero_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:nextFocusDown="@id/macCard">
+
+        <TextView
+            android:id="@+id/hdmiStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="24dp"
+            android:text="●  HDMI 1  ·  等待信号"
+            android:textColor="@color/muted"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hdmiStatus"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="22dp"
+            android:text="插入 HDMI 线"
+            android:textColor="@color/ink"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="138dp"
+            android:text="连接后显示电脑画面"
+            android:textColor="#D8D8DD"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="180dp"
+            android:text="稳定、清晰，无需无线网络"
+            android:textColor="@color/muted"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/wirelessDeviceHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="230dp"
+            android:textColor="#A8CBFA"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/hdmiIllustration"
+            android:layout_width="390dp"
+            android:layout_height="255dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:contentDescription="电脑通过 HDMI 线连接电视"
+            android:scaleType="centerInside"
+            android:src="@drawable/hdmi_desktop" />
+
+        <android.media.tv.TvView
+            android:id="@+id/hdmiPreview"
+            android:layout_width="390dp"
+            android:layout_height="220dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="#000000"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/macCard"
+        android:layout_width="408dp"
+        android:layout_height="94dp"
+        android:layout_above="@id/footerNav"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/card_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:nextFocusRight="@id/windowsCard"
+        android:nextFocusUp="@id/hdmiCard"
+        android:nextFocusDown="@id/settingsButton"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="24dp">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="52dp"
+            android:contentDescription="Mac 电脑"
+            android:src="@drawable/ic_mac" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mac 电脑" android:textColor="@color/ink" android:textSize="20sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="屏幕镜像" android:textColor="#B5B5BA" android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/windowsCard"
+        android:layout_width="408dp"
+        android:layout_height="94dp"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/footerNav"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/card_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:nextFocusLeft="@id/macCard"
+        android:nextFocusUp="@id/hdmiCard"
+        android:nextFocusDown="@id/settingsButton"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="24dp">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="52dp"
+            android:contentDescription="Windows 电脑"
+            android:src="@drawable/ic_laptop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Windows" android:textColor="@color/ink" android:textSize="20sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Win + K" android:textColor="#B5B5BA" android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/deviceNameFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="#85858A"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/footerNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="方向键选择  ·  确认键打开"
+        android:textColor="#85858A"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/settings_background"
+        android:focusable="true"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:nextFocusUp="@id/windowsCard"
+        android:text="系统设置"
+        android:textAllCaps="false"
+        android:textColor="#B5B5BA"
+        android:textSize="15sp" />
+</RelativeLayout>
